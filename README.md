@@ -62,9 +62,9 @@ Update the database configuration as follows:
 ```
 ## 💡 Replace:
 
-```app ``` with your actual DB name
+In ```javax.persistence.jdbc.url```: change ```app``` with your actual DB name
 
-```root``` and ```""``` with your MySQL username/password (as set in XAMPP)
+In ```javax.persistence.jdbc.user``` and ```javax.persistence.jdbc.password```: change the ```host``` number, ```root``` and ```""``` with your MySQL host/username/password (as set in XAMPP)
 
 ---
 
