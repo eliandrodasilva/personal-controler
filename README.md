@@ -71,7 +71,9 @@ Update the database configuration as follows:
 ### 4. Build and Run the Java Application
 Make sure your Maven project is properly set up.
 
-Run your Java code from your IDE or using the terminal:
+Run your Java code from your IDE or using the terminal (the following line is also used to update depedencies from mavem pom.xml):
+
+
 ```
 mvn clean install
 ```
