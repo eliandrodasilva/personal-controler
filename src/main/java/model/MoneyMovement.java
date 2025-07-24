@@ -10,10 +10,16 @@ public class MoneyMovement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(length = 5000, nullable = false, unique = true, name = "col_desc")
     private String description;
     private Double value;
     private String type;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date movementDate;
+
+    @ManyToOne
+    @JoinColumn(name = "id_category")
+    private Category category;
 
     public Long getId() {
         return id;
@@ -35,6 +41,10 @@ public class MoneyMovement {
         return movementDate;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -53,5 +63,9 @@ public class MoneyMovement {
 
     public void setMovementDate(Date movementDate) {
         this.movementDate = movementDate;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
