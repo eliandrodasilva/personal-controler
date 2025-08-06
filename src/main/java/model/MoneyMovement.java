@@ -4,13 +4,13 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name= "moneymovement")
+@Table(name= "financial_logs")
 public class MoneyMovement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 5000, nullable = false, unique = true, name = "col_desc")
+    @Column(length = 300, nullable = false, unique = true, name = "description")
     private String description;
     private Double value;
     private String type;
