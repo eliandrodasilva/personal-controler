@@ -1,14 +1,14 @@
 package dao;
 
 import model.MoneyMovement;
+import persistence.EMF;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.util.List;
 
 public class MovementDAO {
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistenciaPU");
+    EntityManagerFactory emf = EMF.getEMF();
 
     public MoneyMovement insert(MoneyMovement movement) {
         EntityManager em = emf.createEntityManager();
